@@ -17,8 +17,12 @@ class OpenWeatherMapApi:
         weather = self.get_weather()
         print(weather["current"]["temp"])
 
+    def display_humidity(self):
+        weather = self.get_weather()
+        print(weather["current"]["humidity"])
 
 test = OpenWeatherMapApi()
 test.display_temperature()
+test.display_humidity()
 
 
