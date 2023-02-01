@@ -1,7 +1,6 @@
+import openweathermap_api as api
 
-
-
-test = OpenWeatherMapApi()
+test = api.OpenWeatherMapApi()
 test.display_conditions()
 
 
