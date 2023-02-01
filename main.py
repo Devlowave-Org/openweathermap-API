@@ -28,8 +28,6 @@ class OpenWeatherMapApi:
 
 
 test = OpenWeatherMapApi()
-test.display_temperature()
-test.display_humidity()
 test.display_conditions()
 
 
