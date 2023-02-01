@@ -9,9 +9,16 @@ class OpenWeatherMapApi:
         self.lon = 16.373
 
     def get_weather(self):
-        response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params={"lat": self.lat, "lon": self.lon, "appid": self.api_key })
+        response = requests.get("https://api.openweathermap.org/data/2.5/onecall", params={"lat": self.lat, "lon": self.lon, "appid": self.api_key, "units": "metric" })
         json_weather = response.json()
         return json_weather
 
+    def display_temperature(self):
+        weather = self.get_weather()
+        print(weather["current"]["temp"])
+
+
+test = OpenWeatherMapApi()
+test.display_temperature()
 
 
