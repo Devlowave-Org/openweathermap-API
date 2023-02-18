@@ -21,7 +21,6 @@ class OpenWeatherMapApi:
         weather = self.get_weather()
         print(weather["current"]["humidity"])
 
-
     def display_conditions(self):
         weather = self.get_weather()
         print(f"actually there are {weather['current']['weather'][0]['main']}")
